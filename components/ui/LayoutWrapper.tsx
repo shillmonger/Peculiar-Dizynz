@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import Header from "@/components/LandingPage/Header";
 import Footer from "@/components/LandingPage/Footer";
-import CookieConsent from "@/components/LandingPage/CookieConsent";
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -16,7 +15,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <>
         {children}
         <Footer />
-        <CookieConsent />
       </>
     );
   }
@@ -30,7 +28,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <Header />
       {children}
       <Footer />
-      <CookieConsent />
     </>
   );
 }
