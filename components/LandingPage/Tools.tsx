@@ -21,42 +21,42 @@ const TOOLS_AND_SKILLS: ToolSkill[] = [
   {
     name: "Photoshop",
     category: "Adobe",
-    imageUrl: "/tool/Adobe.png",
+    imageUrl: "/Tool/Adobe.png",
   },
   {
     name: "Illustrator",
     category: "Adobe",
-    imageUrl: "/tool/Illustrator.png",
+    imageUrl: "/Tool/Illustrator.png",
   },
   {
     name: "InDesign",
     category: "Adobe",
-    imageUrl: "/tool/indesign.png",
+    imageUrl: "/Tool/indesign.png",
   },
   {
     name: "Figma",
     category: "Other Tool",
-    imageUrl: "/tool/figma.png",
+    imageUrl: "/Tool/figma.png",
   },
   {
     name: "Canva",
     category: "Other Tool",
-    imageUrl: "/tool/Canva.png",
+    imageUrl: "/Tool/Canva.png",
   },
   {
     name: "Procreate",
     category: "Other Tool",
-    imageUrl: "/tool/Procreate.png",
+    imageUrl: "/Tool/Procreate.png",
   },
   {
     name: "Color Theory",
     category: "Design Skill",
-    imageUrl: "/tool/colotheory.png",
+    imageUrl: "/Tool/colotheory.png",
   },
   {
     name: "Pinterest",
     category: "Other Tool",
-    imageUrl: "/tool/pintrest.png",
+    imageUrl: "/Tool/pintrest.png",
   },
 ];
 
