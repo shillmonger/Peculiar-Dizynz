@@ -122,7 +122,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute -left-40 top-0 z-0 h-80 w-80 rounded-full bg-[#E8C9B8]/10 blur-[130px]" />
       <div className="pointer-events-none absolute -right-40 bottom-20 z-0 h-80 w-80 rounded-full bg-[#C48A6A]/15 blur-[130px]" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-6 pb-8 pt-10 md:px-10 lg:pt-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-4 pb-8 pt-10 md:px-10 lg:pt-10">
         {/* Main 12-Column Grid */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* Brand & Socials Column */}
