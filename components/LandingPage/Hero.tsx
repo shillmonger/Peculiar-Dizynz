@@ -37,7 +37,7 @@ const CLIENT_INITIALS = ["AO", "CE", "TK", "MJ", "SR", "PD",];
 */
 const FLOATING_LOGOS = [
   {
-    src: "/tool/Adobe.png",
+    src: "/Tool/Adobe.png",
     alt: "Adobe",
     pos: "left-1 top-[5%] sm:-left-2 lg:left-[60px] xl:left-[77px] lg:top-[8%]",
     delay: 0,
@@ -45,7 +45,7 @@ const FLOATING_LOGOS = [
     rotate: -6,
   },
   {
-    src: "/tool/Illustrator.png",
+    src: "/Tool/Illustrator.png",
     alt: "Adobe Illustrator",
     pos: "right-1 top-[11%] sm:-right-2 lg:right-[56px] xl:right-[72px] lg:top-[12%]",
     delay: 0.2,
@@ -53,7 +53,7 @@ const FLOATING_LOGOS = [
     rotate: 6,
   },
   {
-    src: "/tool/colotheory.png",
+    src: "/Tool/colotheory.png",
     alt: "Color Theory",
     pos: "left-2 top-[22%] sm:-left-3 lg:left-0 xl:left-0 lg:top-[25%]",
     delay: 0.9,
@@ -61,7 +61,7 @@ const FLOATING_LOGOS = [
     rotate: 4,
   },
   {
-    src: "/tool/pintrest.png",
+    src: "/Tool/pintrest.png",
     alt: "Pinterest",
     pos: "right-2 top-[22%] sm:-right-3 lg:right-0 xl:right-0 lg:top-[40%]",
     delay: 1.1,
@@ -69,7 +69,7 @@ const FLOATING_LOGOS = [
     rotate: -4,
   },
   {
-    src: "/tool/Procreate.png",
+    src: "/Tool/Procreate.png",
     alt: "Procreate",
     pos: "left-0 top-[45%] sm:-left-5 lg:left-0 xl:left-0 lg:top-[50%]",
     delay: 0.8,
@@ -77,7 +77,7 @@ const FLOATING_LOGOS = [
     rotate: 5,
   },
   {
-    src: "/tool/indesign.png",
+    src: "/Tool/indesign.png",
     alt: "Adobe InDesign",
     pos: "right-0 top-[50%] sm:-right-5 lg:-right-10 xl:-right-10 lg:top-[60%]",
     delay: 1,
@@ -85,7 +85,7 @@ const FLOATING_LOGOS = [
     rotate: -5,
   },
   {
-    src: "/tool/Canva.png",
+    src: "/Tool/Canva.png",
     alt: "Canva",
     pos: "left-2 bottom-[15%] sm:-left-1 lg:-left-3 xl:-left-3 lg:bottom-[10%]",
     delay: 0.4,
@@ -93,7 +93,7 @@ const FLOATING_LOGOS = [
     rotate: 6,
   },
   {
-    src: "/tool/figma.png",
+    src: "/Tool/figma.png",
     alt: "Figma",
     pos: "right-2 bottom-[15%] sm:-right-1 lg:-right-12 xl:-right-5 lg:bottom-[3%]",
     delay: 0.6,

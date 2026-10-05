@@ -31,13 +31,13 @@ const poppins = Poppins({
 */
 
 const IMG = {
-  c1Tall: "/blog/1.png",
-  c1Short: "/blog/2.png",
-  c2: "/blog/3.png",
-  c3: "/blog/4.png",
-  c4: "/blog/5.png",
-  c5Tall: "/blog/6.png",
-  c5Short: "/blog/7.png",
+  c1Tall: "/Blog/1.png",
+  c1Short: "/Blog/2.png",
+  c2: "/Blog/3.png",
+  c3: "/Blog/4.png",
+  c4: "/Blog/5.png",
+  c5Tall: "/Blog/6.png",
+  c5Short: "/Blog/7.png",
 };
 
 const AVATARS = ["AO", "CE", "TK"];
