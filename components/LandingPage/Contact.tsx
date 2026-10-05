@@ -209,7 +209,7 @@ export default function ContactSection() {
                   required
                   rows={4}
                   placeholder="Enter your message"
-                  className={`${inputBase} resize-none rounded-2xl`}
+                  className={`${inputBase} resize-none rounded-xl`}
                 />
               </div>
 
