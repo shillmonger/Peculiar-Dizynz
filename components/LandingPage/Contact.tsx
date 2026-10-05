@@ -88,7 +88,7 @@ export default function ContactSection() {
       id="contact"
       className={`${poppins.className} relative w-full overflow-hidden py-10 lg:pb-10 lg:pt-0`}
     >
-      <div className="mx-auto max-w-[1500px] px-4 lg:px-8">
+      <div className="w-full mx-auto max-w-[1500px] px-4 lg:px-8">
         <h2 className="text-center text-4xl font-extrabold tracking-tight text-[#2B1810] dark:text-white sm:text-5xl">
           Contact <span className="text-[#7A4A2B] dark:text-[#D2B48C]">Us</span>
         </h2>
