@@ -15,14 +15,14 @@ const poppins = Poppins({
 
 /*
   Palette (brown + white)
-  light: page white/cream, panel #8B5E3C, ink #2B1810, accent #7A4A2B
-  dark:  page inherits your app bg, panel #4A2F1E, text white, accent #D2B48C
+  light: page white/cream, panel #471700, ink #351200, accent #471700
+  dark:  page inherits your app bg, panel #351200, text white, accent #D2B48C
 */
 
 const SERVICES = [
-  { label: "Brand Identity", icon: Layers },
-  { label: "Logo Design", icon: PenTool },
-  { label: "Print/Packaging", icon: Package },
+  { label: "Brand and Visual Design", icon: Layers },
+  { label: "UI/UX Design", icon: PenTool },
+  { label: "Digital Products", icon: Package },
 ];
 
 const CLIENT_INITIALS = ["AO", "CE", "TK", "MJ", "SR", "PD",];
@@ -126,19 +126,19 @@ export default function HeroSection() {
             className="relative z-10 flex flex-col gap-2 lg:absolute lg:inset-x-0 lg:top-0 lg:flex-row lg:justify-between lg:gap-0 sm:px-10"
           >
             <h1 className="leading-none">
-              <span className="block text-3xl font-bold text-[#2B1810] dark:text-white sm:text-4xl lg:text-[2.6rem]">
+              <span className="block text-3xl font-bold text-[#351200] dark:text-white sm:text-4xl lg:text-[2.6rem]">
                 Design Your
               </span>
-              <span className="mt-1 block text-[3.5rem] font-extrabold text-[#7A4A2B] dark:text-[#D2B48C] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+              <span className="mt-1 block text-[3.5rem] font-extrabold text-[#471700] dark:text-[#D2B48C] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
                 VISION
               </span>
             </h1>
 
             <p className="leading-none lg:text-right" aria-hidden>
-              <span className="relative block text-3xl font-bold text-[#2B1810] dark:text-white sm:text-4xl lg:text-[2.6rem]">
+              <span className="relative block text-3xl font-bold text-[#351200] dark:text-white sm:text-4xl lg:text-[2.6rem]">
                 Build Your
               </span>
-              <span className="mt-1 block text-[3.5rem] font-extrabold text-[#7A4A2B] dark:text-[#D2B48C] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+              <span className="mt-1 block text-[3.5rem] font-extrabold text-[#471700] dark:text-[#D2B48C] sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
                 BRAND
               </span>
             </p>
@@ -185,7 +185,7 @@ export default function HeroSection() {
                       ease: "easeInOut",
                       delay: logo.delay,
                     }}
-                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 shadow-lg shadow-black/20 ring-1 ring-[#8B5E3C]/20 backdrop-blur-sm sm:h-14 sm:w-14 sm:rounded-2xl lg:h-16 lg:w-16"
+                    className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 shadow-lg shadow-black/20 ring-1 ring-[#471700]/20 backdrop-blur-sm sm:h-14 sm:w-14 sm:rounded-2xl lg:h-16 lg:w-16"
                   >
                     <Image
                       src={logo.src}
@@ -205,7 +205,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative z-10 -mt-23 sm:-mt-28 overflow-hidden rounded-[2rem] bg-[#8B5E3C] px-6 pb-8 pt-7 sm:pt-30 text-white transition-colors duration-500 dark:bg-[#4A2F1E] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:h-[502px] lg:p-0"
+            className="relative z-10 -mt-23 sm:-mt-28 overflow-hidden rounded-[2rem] bg-[#471700] px-6 pb-8 pt-7 sm:pt-30 text-white transition-colors duration-500 dark:bg-[#351200] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0 lg:h-[502px] lg:p-0"
           >
             {/* soft blobs */}
             <div className="pointer-events-none absolute -left-10 top-28 h-52 w-72 rotate-[-20deg] rounded-[50%] bg-white/10" />
@@ -221,18 +221,16 @@ export default function HeroSection() {
                   </p>
 
                   <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.1rem] xl:text-[2.4rem]">
-                    Where Creativity
-                    <br />
-                    Meets Strategy
+                    WHERE CREATIVITY MEETS EXPERIENCE
                   </h2>
 
                   <p className="mt-4 max-w-[17rem] text-[15px] leading-relaxed text-white/80">
-                    Logos, brand identities, and print design that make people remember you. 
+                    Graphic and UI/UX designs that build memorable brands and meaningful digital experiences.
                   </p>
 
                   <Link
   href="/EzePeculiar.pdf"
-  className="mt-7 inline-flex w-full items-center justify-between rounded-full bg-[#1F130C] py-3 pl-6 pr-3 text-sm font-semibold uppercase text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#2B1810] sm:w-[250px]"
+  className="mt-7 inline-flex w-full items-center justify-between rounded-full bg-[#1F130C] py-3 pl-6 pr-3 text-sm font-semibold uppercase text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#351200] sm:w-[250px]"
 >
   View My Resume
   <span className="flex h-7 w-7 items-center justify-center rounded-full border border-current">
@@ -246,7 +244,7 @@ export default function HeroSection() {
     {CLIENT_INITIALS.map((initials) => (
       <span
         key={initials}
-        className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#8B5E3C] bg-[#F5EDE3] text-[10px] font-bold text-[#7A4A2B] dark:border-[#4A2F1E]"
+        className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#471700] bg-[#F5EDE3] text-[10px] font-bold text-[#471700] dark:border-[#351200]"
       >
         {initials}
       </span>
@@ -287,11 +285,11 @@ export default function HeroSection() {
                         className="object-cover"
                       />
                     </div>
-                    <p className="mt-3 text-center text-sm font-bold">Brand Identity Kit</p>
-                    <p className="text-center text-[11px] text-white/80">Logo and Packaging</p>
+                    <p className="mt-3 text-center text-sm font-bold">UI/UX & Digital Projects</p>
+                    <p className="text-center text-[11px] text-white/80">Web, Mobile & Dashboard Experiences</p>
                     <Link
                       href="https://www.behance.net/peculiarchigaemezu"
-                      className="mx-auto mb-1 mt-2 flex w-fit items-center rounded-full bg-[#F5EDE3] px-5 py-2 text-xs font-bold text-[#7A4A2B] transition-transform hover:scale-105 active:scale-95"
+                      className="mx-auto mb-1 mt-2 flex w-fit items-center rounded-full bg-[#F5EDE3] px-5 py-2 text-xs font-bold text-[#471700] transition-transform hover:scale-105 active:scale-95"
                     >
                       View Case Study
                     </Link>

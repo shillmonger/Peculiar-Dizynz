@@ -32,12 +32,12 @@ const poppins = Poppins({
 
 const IMG = {
   c1Tall: "/Blog/1.png",
-  c1Short: "/Blog/2.png",
-  c2: "/Blog/3.png",
-  c3: "/Blog/4.png",
-  c4: "/Blog/5.png",
-  c5Tall: "/Blog/6.png",
-  c5Short: "/Blog/7.png",
+  c1Short: "https://i.postimg.cc/L62fth8Z/April-Design.jpg",    
+  c2: "https://i.postimg.cc/XqMKS8W9/Independence-day-design-(1).jpg",
+  c3: "https://i.postimg.cc/FFJGWfvK/New-week-post.jpg",
+  c4: "https://i.postimg.cc/d1fdR9D1/September.jpg",
+  c5Tall: "https://i.postimg.cc/mDp3XspB/Independence-day-design.jpg",
+  c5Short: "https://i.postimg.cc/j5xv3vs5/New-Month-design.jpg",
 };
 
 const AVATARS = ["AO", "CE", "TK"];
@@ -66,7 +66,7 @@ function Tile({
 }) {
   return (
     <div
-      className={`group relative min-h-0 overflow-hidden rounded-[1.4rem] border-4 border-[#8B5E3C] ${className}`}
+      className={`group relative min-h-0 overflow-hidden rounded-[1.4rem] border-4 border-[#471700] ${className}`}
       style={{ backgroundColor: tint, ...notchMask(notch) }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -96,13 +96,13 @@ function RotatingBadge() {
           <path id="pd-badge-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
         </defs>
         <text
-          className="fill-[#2B1810] text-[9.5px] font-medium tracking-[0.22em] dark:fill-white"
+          className="fill-[#351200] text-[9.5px] font-medium tracking-[0.22em] dark:fill-white"
           style={{ fontFamily: "inherit" }}
         >
           <textPath href="#pd-badge-circle">LEARN ABOUT MY STORY • WATCH MY INTRO •</textPath>
         </text>
       </svg>
-      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2B1810] text-white transition-transform group-hover:scale-110 dark:bg-[#D2B48C] dark:text-[#2B1810]">
+      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#351200] text-white transition-transform group-hover:scale-110 dark:bg-[#D2B48C] dark:text-[#351200]">
         <Play className="ml-0.5 h-4 w-4 fill-current" />
       </span>
     </Link>
@@ -115,13 +115,13 @@ function AvatarStack() {
       {AVATARS.map((initials, i) => (
         <span
           key={initials}
-          className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#E8C9B8] text-[10px] font-bold text-[#7A4A2B] dark:border-[#1a110b]"
+          className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#E8C9B8] text-[10px] font-bold text-[#471700] dark:border-[#1a110b]"
           style={{ zIndex: 3 - i }}
         >
           {initials}
         </span>
       ))}
-      <span className="z-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#2B1810] text-white dark:border-[#1a110b] dark:bg-[#D2B48C] dark:text-[#2B1810]">
+      <span className="z-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#351200] text-white dark:border-[#1a110b] dark:bg-[#D2B48C] dark:text-[#351200]">
         <Plus className="h-4 w-4" />
       </span>
     </div>
@@ -148,7 +148,7 @@ export default function DesignShowcase() {
           <AvatarStack />
         </div>
 
-        <h2 className="mx-auto max-w-3xl text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-[#2B1810] dark:text-white sm:text-5xl lg:text-6xl">
+        <h2 className="mx-auto max-w-3xl text-center text-4xl font-extrabold leading-[1.1] tracking-tight text-[#351200] dark:text-white sm:text-5xl lg:text-6xl">
           Bring Your Ideas To Life With Bold Design
         </h2>
       </div>
@@ -170,14 +170,14 @@ export default function DesignShowcase() {
         {/* COL 3 — sparkle, centre card, call-to-action button */}
         <div className="flex w-[44%] shrink-0 snap-start flex-col gap-3 lg:w-auto">
           <div className="flex flex-[25] items-center justify-center" aria-hidden>
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8C9B8] text-[#8B5E3C] dark:bg-[#D2B48C]/25 dark:text-[#D2B48C]">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#E8C9B8] text-[#471700] dark:bg-[#D2B48C]/25 dark:text-[#D2B48C]">
               <Sparkles className="h-3.5 w-3.5" />
             </span>
           </div>
           <Tile src={IMG.c3} alt="Design work 4" tint="#A9714B" className="flex-[55]" />
           <Link
             href="https://www.pinterest.com/peculiardizynz/"
-            className="flex flex-[15] items-center justify-center gap-2 rounded-full bg-[#1F130C] px-4 text-sm font-bold sm:text-xl text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#2B1810]"
+            className="flex flex-[15] items-center justify-center gap-2 rounded-full bg-[#1F130C] px-4 text-sm font-bold sm:text-xl text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#351200]"
           >
             View My Work
             <ArrowUpRight className="h-3.5 w-3.5" />
@@ -192,8 +192,8 @@ export default function DesignShowcase() {
 
         {/* COL 5 — tall + short, top aligned (mirror of col 1) */}
         <div className="flex w-[44%] shrink-0 snap-start flex-col gap-3 lg:w-auto">
-          <Tile src={IMG.c5Tall} alt="Design work 6" tint="#8B5E3C" className="flex-[55]" />
-          <Tile src={IMG.c5Short} alt="Design work 7" tint="#6F4429" className="flex-[45]" />
+          <Tile src={IMG.c5Tall} alt="Design work 6" tint="#471700" className="flex-[55]" />
+          <Tile src={IMG.c5Short} alt="Design work 7" tint="#351200" className="flex-[45]" />
         </div>
       </div>
     </section>

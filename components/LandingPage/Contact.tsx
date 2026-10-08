@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Headphones, Send } from "lucide-react";
+import { toast } from "sonner";
 import {
   FaBehance,
   FaDribbble,
@@ -22,8 +23,8 @@ const poppins = Poppins({
 
 /*
   Palette (same brown theme as the hero + showcase)
-  light: page white, form card white, info card #8B5E3C, ink #2B1810, accent #7A4A2B
-  dark:  page inherits your app bg, form card #2A1A11, info card #4A2F1E, accent #D2B48C
+  light: page white, form card white, info card #471700, ink #351200, accent #471700
+  dark:  page inherits your app bg, form card #2A1A11, info card #351200, accent #D2B48C
 */
 const CONTACT = {
   hotline: {
@@ -50,22 +51,20 @@ const CONTACT_ICONS = {
 };
 
 const SOCIALS = [
-  { label: "Instagram", href: "#", icon: FaInstagram },
-  { label: "X / Twitter", href: "#", icon: FaTwitter },
-  { label: "LinkedIn", href: "#", icon: FaLinkedinIn },
-  { label: "Pinterest", href: "#", icon: FaPinterestP },
-  { label: "Behance", href: "#", icon: FaBehance },
-  { label: "Dribbble", href: "#", icon: FaDribbble },
+  { label: "Instagram", href: "https://www.instagram.com/peculiar_dizynz", icon: FaInstagram },
+  { label: "X / Twitter", href: "https://x.com/Peculiar_dizynz", icon: FaTwitter },
+  { label: "LinkedIn", href: "http://www.linkedin.com/in/peculiar-chigaemezu-05932b304", icon: FaLinkedinIn },
+  { label: "Pinterest", href: "https://www.pinterest.com/peculiardizynz/", icon: FaPinterestP },
+  { label: "Behance", href: "https://www.behance.net/peculiarchigaemezu", icon: FaBehance },
+  { label: "WhatsApp", href: "https://wa.me/2348140397526", icon: FaWhatsapp },
 ];
-
-const COUNTRY_CODES = ["+234", "+233", "+27", "+254", "+44", "+1", "+971"];
 
 // Optimized input styling to avoid horizontal overflow on small screens
 const inputBase =
-  "w-full rounded-full border border-[#8B5E3C]/25 bg-white px-3.5 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm text-[#2B1810] placeholder:text-[#2B1810]/45 outline-none transition focus:border-[#8B5E3C] focus:ring-4 focus:ring-[#8B5E3C]/15 dark:border-white/15 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40 dark:focus:border-[#D2B48C] dark:focus:ring-[#D2B48C]/20";
+  "w-full rounded-full border border-[#471700]/25 bg-white px-3.5 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm text-[#351200] placeholder:text-[#351200]/45 outline-none transition focus:border-[#471700] focus:ring-4 focus:ring-[#471700]/15 dark:border-white/15 dark:bg-white/5 dark:text-white dark:placeholder:text-white/40 dark:focus:border-[#D2B48C] dark:focus:ring-[#D2B48C]/20";
 
 const labelBase =
-  "mb-1.5 block text-xs font-semibold text-[#2B1810] dark:text-white";
+  "mb-1.5 block text-xs font-semibold text-[#351200] dark:text-white";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -88,8 +87,10 @@ export default function ContactSection() {
       if (!res.ok) throw new Error("Request failed");
       setStatus("sent");
       form.reset();
+      toast.success("Message sent successfully!");
     } catch {
       setStatus("error");
+      toast.error("Failed to send message. Please try again.");
     }
   }
 
@@ -100,21 +101,21 @@ export default function ContactSection() {
     >
       {/* Set to px-1 (4px) on mobile as requested, scaling up smoothly */}
       <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-4 lg:px-8">
-        <h2 className="text-center text-3xl font-extrabold tracking-tight text-[#2B1810] dark:text-white sm:text-4xl md:text-5xl">
-          Contact <span className="text-[#7A4A2B] dark:text-[#D2B48C]">Us</span>
+        <h2 className="text-center text-3xl font-extrabold tracking-tight text-[#351200] dark:text-white sm:text-4xl md:text-5xl">
+          Contact <span className="text-[#471700] dark:text-[#D2B48C]">Me</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-xs leading-relaxed text-[#2B1810]/80 dark:text-white/80 sm:text-sm md:text-base">
+        <p className="mx-auto mt-3 max-w-2xl text-center text-xs leading-relaxed text-[#351200]/80 dark:text-white/80 sm:text-sm md:text-base">
           Have a project in mind or want to collaborate? I'd love to hear from
           you. Let's create something amazing together.
         </p>
 
         <div className="mt-8 grid gap-6 lg:mt-12 lg:grid-cols-[1fr_380px] lg:items-start lg:gap-8">
           {/* ============ FORM CARD ============ */}
-          <div className="rounded-2xl border border-[#8B5E3C]/15 bg-white p-3.5 shadow-[0_10px_40px_-12px_rgba(139,94,60,0.25)] dark:border-white/10 dark:bg-[#2A1A11] sm:rounded-[2rem] sm:p-8 lg:p-10">
-            <h3 className="text-lg font-bold text-[#2B1810] dark:text-white sm:text-xl lg:text-2xl">
-              Send us a message
+          <div className="rounded-2xl border border-[#471700]/15 bg-white p-3.5 shadow-[0_10px_40px_-12px_rgba(139,94,60,0.25)] dark:border-white/10 dark:bg-[#2A1A11] sm:rounded-[2rem] sm:p-8 lg:p-10">
+            <h3 className="text-lg font-bold text-[#351200] dark:text-white sm:text-xl lg:text-2xl">
+              Send me a message
             </h3>
-            <p className="mt-1 max-w-md text-xs leading-relaxed text-[#2B1810]/70 dark:text-white/70 sm:text-sm">
+            <p className="mt-1 max-w-md text-xs leading-relaxed text-[#351200]/70 dark:text-white/70 sm:text-sm">
               Have a question, a project in mind, or need help choosing the
               right design package? Feel free to contact us.
             </p>
@@ -170,32 +171,14 @@ export default function ContactSection() {
                   <label htmlFor="phone" className={labelBase}>
                     Contact Details
                   </label>
-                  <div className="flex w-full items-center overflow-hidden rounded-full border border-[#8B5E3C]/25 bg-white transition focus-within:border-[#8B5E3C] focus-within:ring-4 focus-within:ring-[#8B5E3C]/15 dark:border-white/15 dark:bg-white/5 dark:focus-within:border-[#D2B48C] dark:focus-within:ring-[#D2B48C]/20">
-                    <select
-                      name="countryCode"
-                      aria-label="Country code"
-                      defaultValue="+234"
-                      className="h-full cursor-pointer bg-transparent py-3 pl-2.5 pr-1 text-xs font-medium text-[#2B1810] outline-none dark:text-white sm:pl-4 sm:text-sm [&>option]:text-[#2B1810]"
-                    >
-                      {COUNTRY_CODES.map((code) => (
-                        <option key={code} value={code}>
-                          {code}
-                        </option>
-                      ))}
-                    </select>
-                    <span
-                      className="h-4 w-px bg-[#8B5E3C]/25 dark:bg-white/20"
-                      aria-hidden
-                    />
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      autoComplete="tel-national"
-                      placeholder="Number"
-                      className="w-full min-w-0 flex-1 bg-transparent px-2.5 py-3 text-xs text-[#2B1810] placeholder:text-[#2B1810]/45 outline-none dark:text-white dark:placeholder:text-white/40 sm:px-4 sm:text-sm"
-                    />
-                  </div>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    placeholder="Enter your phone number"
+                    className={inputBase}
+                  />
                 </div>
               </div>
 
@@ -213,27 +196,11 @@ export default function ContactSection() {
                 />
               </div>
 
-              <div className="flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p
-                  role="status"
-                  aria-live="polite"
-                  className={`text-xs ${
-                    status === "sent"
-                      ? "text-green-700 dark:text-green-400"
-                      : status === "error"
-                      ? "text-red-600 dark:text-red-400"
-                      : "text-transparent"
-                  }`}
-                >
-                  {status === "sent" && "Thanks! Message sent."}
-                  {status === "error" && "Error. Please try again."}
-                  {(status === "idle" || status === "sending") && "."}
-                </p>
-
+              <div className="flex justify-end">
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F130C] px-6 py-3 text-xs font-semibold text-white transition-transform hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-[#F5EDE3] dark:text-[#2B1810] sm:px-8 sm:py-3.5 sm:text-sm"
+                  className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#1F130C] px-6 py-3 text-xs font-semibold text-white transition-transform hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-[#F5EDE3] dark:text-[#351200] sm:px-8 sm:py-3.5 sm:text-sm"
                 >
                   {status === "sending" ? "Sending..." : "Send a Message"}
                   <Send className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -243,13 +210,13 @@ export default function ContactSection() {
           </div>
 
           {/* ============ INFO CARD ============ */}
-          <aside className="relative overflow-hidden rounded-2xl bg-[#8B5E3C] p-4 text-white transition-colors duration-500 dark:bg-[#4A2F1E] sm:rounded-[2rem] sm:p-8">
+          <aside className="relative overflow-hidden rounded-2xl bg-[#471700] p-4 text-white transition-colors duration-500 dark:bg-[#351200] sm:rounded-[2rem] sm:p-8">
             <div className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-white/10 sm:h-44 sm:w-44" />
             <div className="pointer-events-none absolute -bottom-12 -left-8 h-40 w-48 rotate-[-20deg] rounded-[50%] bg-white/10 sm:h-48 sm:w-56" />
 
             <div className="relative">
               <h3 className="text-base font-bold leading-snug sm:text-lg">
-                Hi! We are always here to help you.
+                Hi! I'm are always here to help you.
               </h3>
 
               <ul className="mt-4 space-y-2.5 sm:mt-6 sm:space-y-3">
@@ -268,7 +235,7 @@ export default function ContactSection() {
                       <a
                         href={href}
                         aria-label={label}
-                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition hover:scale-110 hover:bg-[#F5EDE3] hover:text-[#7A4A2B] sm:h-10 sm:w-10"
+                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white transition hover:scale-110 hover:bg-[#F5EDE3] hover:text-[#471700] sm:h-10 sm:w-10"
                       >
                         <Icon className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
                       </a>

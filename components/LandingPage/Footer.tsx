@@ -101,7 +101,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className={`${poppins.className} relative mt-16 w-full overflow-hidden scroll-mt-28 bg-[#6F4429] dark:bg-[#4A2F1E] text-[#F5EDE3] transition-colors duration-500`}
+      className={`${poppins.className} relative mt-16 w-full overflow-hidden scroll-mt-28 bg-[#471700] dark:bg-[#351200] text-[#F5EDE3] transition-colors duration-500`}
     >
       {/* Top accent line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#E8C9B8]/60 to-transparent" />
@@ -135,9 +135,7 @@ export default function Footer() {
             </Link>
 
             <p className="max-w-md text-sm font-medium leading-relaxed text-[#F5EDE3]/80 md:text-base">
-              Creative graphic designer crafting logos, visual brand identities,
-              marketing collateral, and custom print designs. Transforming ideas
-              into polished visuals that elevate brands worldwide.
+              Creative Designer creating impactful visual identities and intuitive digital experiences. From branding and marketing designs to websites, mobile apps, and dashboards, I turn ideas into polished, purposeful designs.
             </p>
 
             <div className="space-y-2">
@@ -167,7 +165,7 @@ export default function Footer() {
                     href={social.href}
                     aria-label={social.name}
                     title={social.name}
-                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#F5EDE3]/20 bg-[#F5EDE3]/10 text-[#F5EDE3] shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#F5EDE3] hover:bg-[#F5EDE3] hover:text-[#7A4A2B] hover:shadow-[0_10px_25px_-8px_rgba(232,201,184,0.5)]"
+                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#F5EDE3]/20 bg-[#F5EDE3]/10 text-[#F5EDE3] shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#F5EDE3] hover:bg-[#F5EDE3] hover:text-[#471700] hover:shadow-[0_10px_25px_-8px_rgba(232,201,184,0.5)]"
                   >
                     {social.icon}
                   </Link>

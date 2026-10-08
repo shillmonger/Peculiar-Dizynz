@@ -64,18 +64,18 @@ export default function ToolsAndSkillsSection() {
   return (
     <section
       id="tools-and-skills"
-      className={`${poppins.className} w-full overflow-hidden bg-white py-16 lg:pt-70 dark:bg-black`}
+      className={`${poppins.className} w-full overflow-hidden py-16 lg:pt-70`}
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Header Tag & Title */}
         <div className="mb-5 text-center">
-          <span className="mb-2 block text-xs font-bold uppercase tracking-[0.25em] text-[#8B5E3C] dark:text-[#D2B48C]">
+          <span className="mb-2 block text-xs font-bold uppercase tracking-[0.25em] text-[#471700] dark:text-[#D2B48C]">
             Expertise & Stack
           </span>
-          <h2 className="text-3xl font-extrabold uppercase tracking-tight text-[#2B1810] dark:text-white md:text-4xl">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tight text-[#351200] dark:text-white md:text-4xl">
             Tools & Creative Skills
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-[#2B1810]/70 dark:text-white/70 md:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-[#351200]/70 dark:text-white/70 md:text-base">
             A curated mix of industry-standard software and core visual
             disciplines I rely on to craft exceptional designs.
           </p>
@@ -118,9 +118,9 @@ export default function ToolsAndSkillsSection() {
 
 function ToolCard({ item }: { item: ToolSkill }) {
   return (
-    <div className="group relative flex cursor-pointer select-none items-center gap-4 rounded-2xl border border-[#8B5E3C]/15 bg-white p-2 pr-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#8B5E3C]/40 hover:shadow-xl dark:border-white/10 dark:bg-[#2B1810]/60">
+    <div className="group relative flex cursor-pointer select-none items-center gap-4 rounded-full border border-[#471700]/15 bg-white p-2 pr-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#471700]/40 hover:shadow-xl dark:border-white/10 dark:bg-[#351200]/60">
       {/* Image Container with subtle background hover glow */}
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#E8C9B8]/25 transition-colors duration-300 group-hover:bg-[#8B5E3C] dark:bg-white/10 dark:group-hover:bg-[#D2B48C]">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#E8C9B8]/25 transition-colors duration-300 group-hover:bg-[#471700] dark:bg-white/10 dark:group-hover:bg-[#D2B48C]">
         <img
           src={item.imageUrl}
           alt={item.name}
@@ -130,10 +130,10 @@ function ToolCard({ item }: { item: ToolSkill }) {
 
       {/* Label and Category Tag */}
       <div>
-        <h3 className="text-base font-bold text-[#2B1810] dark:text-white">
+        <h3 className="text-base font-bold text-[#351200] dark:text-white">
           {item.name}
         </h3>
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8B5E3C]/70 dark:text-[#D2B48C]/70">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#471700]/70 dark:text-[#D2B48C]/70">
           {item.category}
         </span>
       </div>

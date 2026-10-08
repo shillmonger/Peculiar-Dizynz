@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 /*
   Palette (matches the hero)
-  light: cream #FBF6F1, brown #8B5E3C / #7A4A2B, ink #2B1810, blush #E8C9B8
+  light: cream #FBF6F1, brown #471700 / #471700, ink #351200, blush #E8C9B8
   dark:  deep brown #1F130C, sand #D2B48C, cream text
 */
 
@@ -39,9 +39,9 @@ function Logo({ onLogoClick }: { onLogoClick?: () => void }) {
       }}
       className="group inline-flex items-center gap-2.5 focus:outline-none cursor-pointer"
     >
-      <span className="text-lg font-bold tracking-tight text-[#2B1810] dark:text-white sm:text-xl sm:pl-2">
+      <span className="text-lg font-bold tracking-tight text-[#351200] dark:text-white sm:text-xl sm:pl-2">
         {BRAND_FIRST}{" "}
-        <span className=" text-[#8B5E3C] dark:text-[#D2B48C]">{BRAND_SECOND}</span>
+        <span className=" text-[#471700] dark:text-[#D2B48C]">{BRAND_SECOND}</span>
       </span>
     </a>
   );
@@ -152,8 +152,8 @@ export default function Navbar() {
         <div
           className={`mx-auto flex h-13 max-w-5xl items-center justify-between rounded-full border px-4 backdrop-blur-xl transition-all duration-300 sm:px-2  ${
             isScrolled
-              ? "border-[#8B5E3C]/20 bg-[#FBF6F1]/90 shadow-lg shadow-[#8B5E3C]/15 dark:border-[#D2B48C]/20 dark:bg-[#1F130C]/90 dark:shadow-black/40"
-              : "border-[#8B5E3C]/10 bg-[#FBF6F1]/70 shadow-sm dark:border-white/10 dark:bg-[#1F130C]/60"
+              ? "border-[#471700]/20 bg-[#FBF6F1]/90 shadow-lg shadow-[#471700]/15 dark:border-[#D2B48C]/20 dark:bg-[#1F130C]/90 dark:shadow-black/40"
+              : "border-[#471700]/10 bg-[#FBF6F1]/70 shadow-sm dark:border-white/10 dark:bg-[#1F130C]/60"
           }`}
         >
           <Logo onLogoClick={handleLogoClick} />
@@ -170,13 +170,13 @@ export default function Navbar() {
                   aria-current={isActive ? "true" : undefined}
                   className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors cursor-pointer ${
                     isActive
-                      ? "bg-[#8B5E3C]/10 text-[#7A4A2B] dark:bg-[#D2B48C]/15 dark:text-[#D2B48C]"
-                      : "text-[#2B1810]/70 hover:bg-[#8B5E3C]/5 hover:text-[#7A4A2B] dark:text-white/70 dark:hover:bg-white/5 dark:hover:text-[#D2B48C]"
+                      ? "bg-[#471700]/10 text-[#471700] dark:bg-[#D2B48C]/15 dark:text-[#D2B48C]"
+                      : "text-[#351200]/70 hover:bg-[#471700]/5 hover:text-[#471700] dark:text-white/70 dark:hover:bg-white/5 dark:hover:text-[#D2B48C]"
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute -bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-[#8B5E3C] dark:bg-[#D2B48C]" />
+                    <span className="absolute -bottom-0.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-[#471700] dark:bg-[#D2B48C]" />
                   )}
                 </a>
               );
@@ -188,7 +188,7 @@ export default function Navbar() {
             <a
               href="/#contact"
               onClick={(e) => handleSmoothScroll(e, "contact")}
-              className="group hidden items-center gap-2 rounded-full bg-gradient-to-r from-[#8B5E3C] to-[#C48A6A] py-2 pl-5 pr-3 text-sm font-semibold text-white shadow-md shadow-[#8B5E3C]/30 transition-all hover:shadow-lg hover:shadow-[#8B5E3C]/40 active:scale-95 dark:from-[#C48A6A] dark:to-[#D2B48C] dark:text-[#2B1810] sm:inline-flex cursor-pointer"
+              className="group hidden items-center gap-2 rounded-full bg-gradient-to-r from-[#471700] to-[#C48A6A] py-2 pl-5 pr-3 text-sm font-semibold text-white shadow-md shadow-[#471700]/30 transition-all hover:shadow-lg hover:shadow-[#471700]/40 active:scale-95 dark:from-[#C48A6A] dark:to-[#D2B48C] dark:text-[#351200] sm:inline-flex cursor-pointer"
             >
               Get a Quote
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/25 transition-transform group-hover:translate-x-0.5">
@@ -200,7 +200,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={mobileMenuOpen}
-              className="rounded-full p-2.5 text-[#2B1810] transition-colors hover:bg-[#8B5E3C]/10 focus-visible:outline-2 focus-visible:outline-[#8B5E3C] dark:text-white dark:hover:bg-white/10 lg:hidden"
+              className="rounded-full p-2.5 text-[#351200] transition-colors hover:bg-[#471700]/10 focus-visible:outline-2 focus-visible:outline-[#471700] dark:text-white dark:hover:bg-white/10 lg:hidden"
             >
               <Menu className="h-6 w-6" />
             </button>
@@ -215,7 +215,7 @@ export default function Navbar() {
       <div
         onClick={closeMobileMenu}
         aria-hidden="true"
-        className={`fixed inset-0 z-[60] bg-[#2B1810]/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[60] bg-[#351200]/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           mobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
@@ -229,7 +229,7 @@ export default function Navbar() {
       >
         <div className="relative flex h-full flex-col justify-between overflow-y-auto p-4">
           {/* soft blob */}
-          <div className="pointer-events-none absolute -right-16 top-40 h-64 w-64 rounded-full bg-[#E8C9B8]/50 blur-3xl dark:bg-[#8B5E3C]/25" />
+          <div className="pointer-events-none absolute -right-16 top-40 h-64 w-64 rounded-full bg-[#E8C9B8]/50 blur-3xl dark:bg-[#471700]/25" />
 
           <div className="relative">
             <div className="mb-8 flex items-center justify-between">
@@ -237,7 +237,7 @@ export default function Navbar() {
               <button
                 onClick={closeMobileMenu}
                 aria-label="Close navigation menu"
-                className="rounded-full p-2.5 text-[#2B1810] transition-colors hover:bg-[#8B5E3C]/10 dark:text-white dark:hover:bg-white/10"
+                className="rounded-full p-2.5 text-[#351200] transition-colors hover:bg-[#471700]/10 dark:text-white dark:hover:bg-white/10"
               >
                 <X className="h-6 w-6" />
               </button>
@@ -256,8 +256,8 @@ export default function Navbar() {
                     }}
                     className={`rounded-full px-5 py-3 text-lg font-semibold transition-colors cursor-pointer ${
                       isActive
-                        ? "bg-[#8B5E3C] text-white dark:bg-[#D2B48C] dark:text-[#2B1810]"
-                        : "text-[#2B1810] hover:bg-[#8B5E3C]/10 dark:text-white dark:hover:bg-white/10"
+                        ? "bg-[#471700] text-white dark:bg-[#D2B48C] dark:text-[#351200]"
+                        : "text-[#351200] hover:bg-[#471700]/10 dark:text-white dark:hover:bg-white/10"
                     }`}
                   >
                     {link.label}
@@ -274,7 +274,7 @@ export default function Navbar() {
                 handleSmoothScroll(e, "contact");
                 closeMobileMenu();
               }}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#8B5E3C] to-[#C48A6A] py-3.5 text-base font-semibold text-white shadow-lg shadow-[#8B5E3C]/30 transition-transform active:scale-95 dark:from-[#C48A6A] dark:to-[#D2B48C] dark:text-[#2B1810] cursor-pointer"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#471700] to-[#C48A6A] py-3.5 text-base font-semibold text-white shadow-lg shadow-[#471700]/30 transition-transform active:scale-95 dark:from-[#C48A6A] dark:to-[#D2B48C] dark:text-[#351200] cursor-pointer"
             >
               Get a Quote
               <ArrowRight className="h-4 w-4" />

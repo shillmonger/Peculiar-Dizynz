@@ -47,11 +47,11 @@ export default function ThemeAndScroll({ children }: ThemeAndScrollProps) {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="
               fixed bottom-20 right-4 sm:bottom-22 sm:right-6 z-50
-              bg-[#8B5E3C]/80 dark:bg-[#4A2F1E]/80 backdrop-blur-md text-white
+              bg-[#471700]/80 dark:bg-[#351200]/80 backdrop-blur-md text-white
               w-12 h-12 rounded-full
               flex items-center justify-center
-              shadow-lg shadow-[#8B5E3C]/20 dark:shadow-black/40
-              hover:bg-[#7A4A2B] dark:hover:bg-[#D2B48C] hover:scale-110
+              shadow-lg shadow-[#471700]/20 dark:shadow-black/40
+              hover:bg-[#471700] dark:hover:bg-[#D2B48C] hover:scale-110
               active:scale-95
               transition-all duration-300 cursor-pointer
             "
@@ -69,8 +69,8 @@ export default function ThemeAndScroll({ children }: ThemeAndScrollProps) {
           whileTap={{ scale: 0.95 }}
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="fixed bottom-6 right-4 sm:bottom-8 sm:right-6 z-50 flex items-center justify-center w-12 h-12 rounded-2xl
-          bg-gradient-to-tr from-[#8B5E3C] via-[#7A4A2B] to-[#6F4429] text-white shadow-lg shadow-[#8B5E3C]/25 transition-all duration-300
-          hover:shadow-xl hover:shadow-[#8B5E3C]/40 cursor-pointer focus:outline-none ring-1 ring-white/20"
+          bg-gradient-to-tr from-[#471700] via-[#471700] to-[#351200] text-white shadow-lg shadow-[#471700]/25 transition-all duration-300
+          hover:shadow-xl hover:shadow-[#471700]/40 cursor-pointer focus:outline-none ring-1 ring-white/20"
           aria-label="Toggle theme"
           title="Toggle theme"
         >
