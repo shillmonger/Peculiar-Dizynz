@@ -25,8 +25,6 @@ const SERVICES = [
   { label: "Digital Products", icon: Package },
 ];
 
-const CLIENT_INITIALS = ["AO", "CE", "TK", "MJ", "SR", "PD",];
-
 /*
   Floating tool logos.
   Positions are relative to the hero image wrapper (NOT clipped by the image),
@@ -109,6 +107,13 @@ function FourPointStar({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+/*
+  125% zoom fix.
+  Every class prefixed with `min-[1180px]:max-[1279px]:` only applies between
+  1180px and 1279px viewport width (where 125% browser zoom lands on a 1920px
+  screen with 125% Windows scaling). All other widths are unchanged.
+*/
 
 export default function HeroSection() {
   return (
@@ -211,16 +216,16 @@ export default function HeroSection() {
             <div className="pointer-events-none absolute -left-10 top-28 h-52 w-72 rotate-[-20deg] rounded-[50%] bg-white/10" />
             <div className="pointer-events-none absolute right-1/3 bottom-0 h-64 w-40 rounded-[50%] bg-white/10" />
 
-            <div className="relative grid gap-10 lg:h-full lg:grid-cols-[1fr_460px_1fr] lg:gap-0">
+            <div className="relative grid gap-10 lg:h-full lg:grid-cols-[1fr_460px_1fr] lg:gap-0 min-[1180px]:max-[1279px]:grid-rows-[minmax(0,1fr)]">
               {/* ----- left column ----- */}
-              <div className="flex flex-col gap-8 lg:justify-between lg:py-8 lg:pl-10 lg:pr-4">
-                <div className="lg:mt-10">
+              <div className="flex flex-col gap-8 lg:justify-between lg:py-8 lg:pl-10 lg:pr-4 min-[1180px]:max-[1279px]:py-6">
+                <div className="lg:mt-10 min-[1180px]:max-[1279px]:mt-2">
                   <p className="flex items-center gap-2 text-xs text-white/80">
                     <FourPointStar className="h-3 w-3" />
                     Available for projects
                   </p>
 
-                  <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.1rem] xl:text-[2.4rem]">
+                  <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.1rem] xl:text-[2.4rem] min-[1180px]:max-[1279px]:text-[1.7rem]">
                     WHERE CREATIVITY MEETS EXPERIENCE
                   </h2>
 
@@ -229,34 +234,15 @@ export default function HeroSection() {
                   </p>
 
                   <Link
-  href="/EzePeculiar.pdf"
-  className="mt-7 inline-flex w-full items-center justify-between rounded-full bg-[#1F130C] py-3 pl-6 pr-3 text-sm font-semibold uppercase text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#351200] sm:w-[250px]"
->
-  View My Resume
-  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-current">
-    <ArrowRight className="h-4 w-4" />
-  </span>
-</Link>
+                    href="/EzePeculiar.pdf"
+                    className="mt-7 inline-flex w-full items-center justify-between rounded-full bg-[#1F130C] py-3 pl-6 pr-3 text-sm font-semibold uppercase text-white transition-transform hover:scale-[1.03] active:scale-95 dark:bg-[#F5EDE3] dark:text-[#351200] sm:w-[250px]"
+                  >
+                    View My Resume
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-current">
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </Link>
                 </div>
-
-                <div className="hidden lg:flex w-fit flex-row items-center gap-3 rounded-2xl bg-white/15 py-2.5 pl-3 pr-5 backdrop-blur-sm">
-  <div className="flex -space-x-2">
-    {CLIENT_INITIALS.map((initials) => (
-      <span
-        key={initials}
-        className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[#471700] bg-[#F5EDE3] text-[10px] font-bold text-[#471700] dark:border-[#351200]"
-      >
-        {initials}
-      </span>
-    ))}
-  </div>
-
-  <p className="text-[11px] leading-snug text-white/90">
-    Trusted by 20+
-    <br />
-    happy clients
-  </p>
-</div>
               </div>
 
               {/* ----- centre spacer (her image sits here on desktop) ----- */}

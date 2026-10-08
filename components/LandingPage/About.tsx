@@ -120,7 +120,7 @@ export default function AboutSection() {
               About Me
             </span>
 
-            <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-[#351200] dark:text-white md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 text-2xl font-extrabold tracking-tight text-[#351200] dark:text-white md:text-4xl lg:text-3xl">
               Turning ideas into impactful visual and digital experiences.
             </h2>
 
